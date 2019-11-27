@@ -1,0 +1,50 @@
+body {
+  background-image: url(images/Swamp.png);
+}
+img {
+  width: 100%;
+}
+.row {
+  display: flex;
+}
+.knives {
+  flex: 33.33%;
+  padding: 5px;
+  background-color: transparent;
+  position: relative;
+  animation-name: spin;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.text {
+  color: green;
+  
+  position: relative;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.ghost {
+  width: 0%;
+   animation: grow 30s infinite linear;
+}
+
+@keyframes spin {
+	from { transform: rotateY(0); }
+	to { transform: rotateY(360deg); }
+}
+
+@keyframes grow {
+    0%   {width: 0%;}
+    25%  {width: 125%;}
+    50%  {width: 200%;}
+    100% {width: 50%;}
+}
+
+@keyframes opacity {
+  0%   {opacity: 0;}
+  50%  {opacity: .5;}
+  100% {opacity: 1;}
+}
